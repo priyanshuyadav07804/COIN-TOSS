@@ -8,9 +8,10 @@ const Main = () => {
     const [head, setHead] = useState(0);
     const [tail, setTail] = useState(0);
     const [result, setResult] = useState("HEADS");
+    const flipSound = new Audio(coinSound)
+    flipSound.preload = "auto";
   
     const flipCoin = () => {
-      const flipSound = new Audio(coinSound)
       flipSound.play()
       setIsFlipping(true);
   
