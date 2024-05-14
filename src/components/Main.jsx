@@ -10,8 +10,9 @@ const Main = () => {
     const [result, setResult] = useState("HEADS");
   
     const flipCoin = () => {
+      const flipSound = new Audio(coinSound)
+      flipSound.play()
       setIsFlipping(true);
-      new Audio(coinSound).play();
   
       setTimeout(() => {
         const randomResult = Math.random() < 0.5 ? "HEADS" : "TAILS";
