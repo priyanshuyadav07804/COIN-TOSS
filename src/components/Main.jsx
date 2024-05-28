@@ -30,6 +30,7 @@ const Main = () => {
     }else{
       setIsCoinSelected(false)
     }
+    setResult('TAILS')
   }
   ,[selectedCoin]);
 
