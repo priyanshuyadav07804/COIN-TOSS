@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
         </div>
         <p className="my-6 text-sm text-start md:text-center text-gray-500 tracking-wide sm:max-w-[950px]">
-        If you want to flip a coin to decide something but you don't have any in your pockets, you can flip an online or virtual coin that is always available within the tools that we offer you from Hero'sHappy Group.
+        Coin flipping has been around for a long time. The custom of deciding between two options by tossing a coin dates back to the Roman Empire.
         </p>
   
         <div className="flex space-x-10 mt-5  mx-auto">
