@@ -3,7 +3,7 @@ import React from 'react'
 const Heading = () => {
   return (
     <div className="flex flex-col gap-4 justify-center items-center px-10">
-    <h1 className=" font-bold text-4xl sm:text-5xl font-[sans-serif] ">
+    <h1 className=" font-bold text-4xl sm:text-5xl font-[sans-serif] text-center ">
       Heads or Tails
     </h1>
     <p className=" max-w-[650px] text-lg font-sans text-slate-500 tracking-wide text-center">
