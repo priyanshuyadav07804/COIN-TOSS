@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useMemo } from "react";
 
 import { useRecoilValue } from "recoil";
 import { selectedCoinState } from "../atoms.js";
@@ -25,14 +25,9 @@ const Main = () => {
   const [isCoinSelected, setIsCoinSelected] = useState(false)
 
   useEffect(()=>{
-    if (selectedCoin !== "virtual") {
-      setIsCoinSelected(true);
-    }else{
-      setIsCoinSelected(false)
-    }
-    setResult('TAILS')
-  }
-  ,[selectedCoin]);
+      setIsCoinSelected(selectedCoin !== "virtual");
+      setResult('TAILS')
+  },[selectedCoin]);
 
   const flipSound = new Audio(coinSound);
   flipSound.preload = "auto";
@@ -51,7 +46,7 @@ const Main = () => {
     }, 2980);
   };
 
-  const getCoinImages = () => {
+  const { front, back } = useMemo(() => {
     switch (selectedCoin) {
       case "5rs":
         return { front: coinTails5rs, back: coinHeads5rs };
@@ -62,9 +57,7 @@ const Main = () => {
       default:
         return { front: coinTails10rs, back: coinHeads10rs };
     }
-  };
-
-  const { front, back } = getCoinImages();
+  }, [selectedCoin]);
 
   return (
     <main className="flex flex-col gap-10 border-b-2 py-10 pb-16 ">
