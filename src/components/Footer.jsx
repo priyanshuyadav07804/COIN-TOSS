@@ -37,6 +37,7 @@ const Footer = () => {
             className="flex items-center p-1"
           >
             <TwitterIcon/>
+            <p className="hidden">Follow Priyanshu Yadav on Twitter</p>
           </a>
           <a
             rel="noopener noreferrer"
@@ -46,6 +47,7 @@ const Footer = () => {
             className="flex items-center p-1"
           >
             <InstagramIcon/>
+            <p className="hidden">Follow Priyanshu Yadav on Instagram</p>
           </a>
         </div>
       </div>
