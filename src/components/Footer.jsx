@@ -27,6 +27,8 @@ const Footer = () => {
             className="flex items-center p-1"
           >
             <GithubIcon/>
+            <p className="hidden">Follow Priyanshu Yadav on Github</p>
+
           </a>
           
           <a
