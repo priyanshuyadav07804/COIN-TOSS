@@ -62,6 +62,16 @@ const Main = () => {
   return (
     <main className="flex flex-col gap-10 border-b-2 py-10 pb-16 ">
       <Heading />
+      <div className="hidden">
+        <img src={coinTails10rs} alt="coin front" />
+        <img src={coinHeads10rs} alt="coin back" />
+        <img src={coinHeads2rs} alt="coin front" />
+        <img src={coinTails2rs} alt="coin back" />
+        <img src={coinHeads5rs} alt="coin front" />
+        <img src={coinTails5rs} alt="coin back" />
+        <img src={coinTails1rs} alt="coin front" />
+        <img src={coinHeads1rs} alt="coin back" />
+        </div>
       <div className="flex flex-col items-center gap-10">
         <div className="flex justify-evenly w-60">
           <span>
@@ -86,7 +96,7 @@ const Main = () => {
                     <img
                       src={front}
                       alt="coin front"
-                      className="rounded-[50%] h-full"
+                      className="rounded-[50%] h-full transition-all duration-500 ease-in-out"
                     />
                   ) : (
                     <span className="border-2 border-white border-dotted h-[80%] w-[80%] rounded-[50%] flex justify-center items-center  font-bold text-3xl ">
@@ -99,7 +109,7 @@ const Main = () => {
                     <img
                       src={back}
                       alt="coin back"
-                      className="rounded-[50%] h-full"
+                      className="rounded-[50%] h-full transition-all duration-500 ease-in-out"
                     />
                   ) : (
                     <span className="border-2 border-white border-dotted h-[80%] w-[80%] rounded-[50%] flex justify-center items-center  font-bold text-3xl ">
@@ -115,7 +125,7 @@ const Main = () => {
                     <img
                       src={result === "TAILS" ? front : back}
                       alt="result"
-                      className="rounded-[50%] h-full"
+                      className="rounded-[50%] h-full transition-all duration-500 ease-in-out"
                     />
                   ) : (
                     <span className="border-2 border-white border-dotted h-[80%] w-[80%] rounded-[50%] flex justify-center items-center  font-bold text-3xl ">
